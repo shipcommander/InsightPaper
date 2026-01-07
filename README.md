@@ -29,6 +29,12 @@
 
 **InsightPaper** 是一款专为科研人员和学生设计的智能论文阅读与管理工具。它集成了 PDF 阅读、翻译对照、AI 辅助分析、笔记管理等功能，帮助您更高效地阅读和理解学术论文。
 
+## 📸 界面预览
+
+<p align="center">
+  <img src="Icons/image.png" alt="InsightPaper Interface" width="800">
+</p>
+
 ## ✨ 功能特性
 
 ### 📚 论文管理
@@ -146,7 +152,8 @@ InsightPaper/
 ├── requirements.txt        # 依赖列表
 ├── Icons/                  # 图标资源
 │   ├── LOGO.png
-│   └── LOGO.ico
+│   ├── LOGO.ico
+│   └── image.png           # 界面预览图
 ├── modules/                # 功能模块
 │   ├── pdf_viewer.py       # PDF 阅读器
 │   ├── ai_assistant.py     # AI 助手集成
