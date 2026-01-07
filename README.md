@@ -17,8 +17,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.9+-blue.svg" alt="Python">
-  <img src="https://img.shields.io/badge/PyQt6-6.0+-green.svg" alt="PyQt6">
+  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python">
+  <img src="https://img.shields.io/badge/PyQt6-6.6+-green.svg" alt="PyQt6">
   <img src="https://img.shields.io/badge/Platform-Windows-lightgrey.svg" alt="Platform">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
 </p>
@@ -58,36 +58,29 @@
 
 ## 🚀 快速开始
 
-### 方式一：运行源代码
+### 安装依赖
 
 ```bash
-# 1. 克隆仓库
+# 克隆仓库
 git clone https://github.com/yourusername/InsightPaper.git
 cd InsightPaper
 
-# 2. 安装依赖
+# 安装依赖
 pip install -r requirements.txt
 
-# 3. 运行程序
+# 运行程序
 python mainwindow.py
-```
-
-### 方式二：使用打包版本
-
-```bash
-# 打包为独立 EXE
-python build_exe.py
-
-# 运行生成的可执行文件
-./dist/InsightPaper.exe
 ```
 
 ### 依赖要求
 
-- Python 3.9+
-- PyQt6
-- PyQt6-Fluent-Widgets
-- PyMuPDF (fitz)
+| 依赖包 | 版本要求 | 说明 |
+|--------|----------|------|
+| Python | 3.8+ | 运行环境 |
+| PyQt6 | ≥6.6.0 | GUI 框架 |
+| PyQt6-WebEngine | ≥6.6.0 | Web 组件（AI助手） |
+| PyQt6-Fluent-Widgets | ≥1.5.0 | Fluent 设计组件 |
+| PyMuPDF | ≥1.23.0 | PDF 渲染引擎 |
 
 ## 📖 使用指南
 
@@ -112,20 +105,44 @@ python build_exe.py
 
 ## ⌨️ 快捷键
 
+### 缩放控制
+
 | 快捷键 | 功能 |
 |--------|------|
-| `Ctrl + 滚轮` | 缩放页面 |
-| `Shift + 滚轮` | 调整笔刷大小 |
-| `Alt + 拖拽` | 选中文本 |
-| `右键拖拽` | 平移页面 |
-| `Shift (按住)` | 切换橡皮擦模式 |
+| `Ctrl` + `+` | 放大页面 |
+| `Ctrl` + `=` | 放大页面（同上） |
+| `Ctrl` + `-` | 缩小页面 |
+| `Ctrl` + `滚轮` | 缩放页面 |
+
+### 标注工具
+
+| 快捷键 | 功能 |
+|--------|------|
+| `B` | 切换高亮标记模式（开启/关闭） |
+| `Shift` + `B` | 切换橡皮擦模式 |
+| `Shift` (按住) | 临时切换为橡皮擦（松开恢复） |
+| `Shift` + `滚轮` | 调整笔刷/橡皮擦大小 |
+
+### 文本与导航
+
+| 快捷键 | 功能 |
+|--------|------|
+| `Alt` + `拖拽选择` | 选中 PDF 文本并翻译 |
+| `右键拖拽` | 平移/拖动页面 |
+| `滚轮` | 上下滚动页面 |
+
+### 其他
+
+| 快捷键 | 功能 |
+|--------|------|
+| `点击缩略图` | 快速跳转到指定页面 |
+| `双击论文` | 切换到仅原文模式 |
 
 ## 🏗️ 项目结构
 
 ```
 InsightPaper/
 ├── mainwindow.py           # 主窗口入口
-├── build_exe.py            # 打包脚本
 ├── requirements.txt        # 依赖列表
 ├── Icons/                  # 图标资源
 │   ├── LOGO.png
@@ -150,10 +167,12 @@ InsightPaper/
 
 ## 🛠️ 技术栈
 
-- **GUI 框架**: PyQt6 + PyQt6-Fluent-Widgets
-- **PDF 渲染**: PyMuPDF (fitz)
-- **Web 集成**: PyQt6-WebEngine
-- **打包工具**: PyInstaller
+| 类别 | 技术 |
+|------|------|
+| GUI 框架 | PyQt6 + PyQt6-Fluent-Widgets |
+| PDF 渲染 | PyMuPDF (fitz) |
+| Web 集成 | PyQt6-WebEngine |
+| 设计风格 | Microsoft Fluent Design |
 
 ## 📄 许可证
 
@@ -168,4 +187,3 @@ InsightPaper/
 <p align="center">
   Made with ❤️ for Researchers
 </p>
-
