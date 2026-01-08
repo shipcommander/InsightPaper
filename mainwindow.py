@@ -25,7 +25,7 @@ from modules.ai_assistant import AIWebViewer # Corrected from AIWebViewerManager
 from PyQt6.QtWidgets import QStackedWidget, QLabel, QVBoxLayout, QWidget
 from PyQt6.QtGui import QPixmap, QColor
 from PyQt6.QtCore import Qt, QUrl
-from modules.pdf_viewer import PDFViewerWidget
+from modules.pdf_widgets import PDFViewerWidget
 from modules.draggable_list import DraggableListWidget
 from modules.help_dialog import HelpDialog
 from modules.edit_tools import EditToolsManager
@@ -393,6 +393,10 @@ class MainWindow(FluentWindow):
             brush_path = os.path.join(target_dir, "marker.json")
             brush_path_trans = os.path.join(target_dir, "marker_trans.json")
             
+            # --- TOC Files ---
+            toc_path = os.path.join(target_dir, "toc_original.json")
+            toc_path_trans = os.path.join(target_dir, "toc_translation.json") # Although currently unused for sidebar
+            
             # --- Rotation State Files ---
             rotation_path = os.path.join(target_dir, "rotation.json")
             rotation_path_trans = os.path.join(target_dir, "rotation_trans.json")
@@ -401,11 +405,12 @@ class MainWindow(FluentWindow):
                 # 并排显示原文和翻译版
                 self.pdf_viewer.load_side_by_side(pdf_path, trans_path, cache_original, cache_trans, 
                                                    brush_path=brush_path, brush_path2=brush_path_trans,
-                                                   rotation_path=rotation_path, rotation_path2=rotation_path_trans)
+                                                   rotation_path=rotation_path, rotation_path2=rotation_path_trans,
+                                                   toc_path=toc_path, toc_path2=toc_path_trans) # <--- Pass toc_path here? Wait, load_side_by_side definition only takes one toc_path? 
                 self.status_bar.showMessage(f"正在阅读 (并排模式): {filename}")
             else:
                 # 仅显示原文
-                self.pdf_viewer.load_pdf(pdf_path, cache_dir=cache_original, brush_path=brush_path, rotation_path=rotation_path)
+                self.pdf_viewer.load_pdf(pdf_path, cache_dir=cache_original, brush_path=brush_path, rotation_path=rotation_path, toc_path=toc_path)
                 self.status_bar.showMessage(f"正在阅读: {filename}")
             
             # Switch to PDF view if not already
