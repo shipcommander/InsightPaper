@@ -38,9 +38,41 @@
 ## ✨ 功能特性
 
 ### 📚 论文管理
-- **层级分类** - 支持 主题(Topic) → 组(Group) → 论文(PDF) 的三级层级管理
+
+#### 🗂️ 三级层次化组织
+
+InsightPaper 支持通过**文件夹结构**自动识别论文的层级分类，无需手动操作：
+
+<p align="center">
+  <img src="C:/Users/Admins/.gemini/antigravity/brain/39193944-c6a7-4a77-89ae-7f66ff546312/uploaded_image_1767848161648.png" alt="Hierarchical Organization" width="300">
+</p>
+
+只需按照以下文件夹结构组织您的论文，程序将自动识别：
+
+```
+data/
+├── 主题1 (Topic)/
+│   ├── 组1 (Group)/
+│   │   ├── paper1.pdf
+│   │   └── paper2.pdf
+│   ├── 组2 (Group)/
+│   │   └── paper3.pdf
+│   └── topic_paper.pdf       # 直接放在主题下
+├── 主题2 (Topic)/
+│   └── ...
+└── root_paper.pdf           # 根目录下的未分类论文
+```
+
+**支持的层级结构：**
+- **Level 0 (根目录)** - `data/paper.pdf` → 未分类论文
+- **Level 1 (主题)** - `data/computer_vision/` → 主题文件夹
+- **Level 2 (组)** - `data/computer_vision/few-shot-seg/` → 组文件夹
+- **Level 3 (论文)** - `data/computer_vision/few-shot-seg/paper.pdf` → 具体论文
+
+#### ✨ 其他管理功能
 - **拖拽操作** - 支持拖拽导入论文，拖拽重新分类
 - **翻译版管理** - 拖拽 PDF 到论文上即可设为翻译版
+- **右键管理** - 右键重命名、删除主题/组/论文
 
 ### 📖 阅读体验
 - **并排阅读** - 原文与翻译版并排显示，同步滚动
