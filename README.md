@@ -25,7 +25,14 @@
 
 ---
 
-## 📖 简介
+## � News
+
+- **(🆕 New)** [2025/01/08] 更新版本，新增**三级分层组织**功能，支持通过文件夹结构自动识别论文层级分类；优化 PDF 渲染性能与文本提取算法。
+- **(🎉 Release)** [2025/01/07] 发布 **InsightPaper Core**，支持 PDF 并排阅读、AI 辅助翻译、智能标注等核心功能。
+
+---
+
+## �📖 简介
 
 **InsightPaper** 是一款专为科研人员和学生设计的智能论文阅读与管理工具。它集成了 PDF 阅读、翻译对照、AI 辅助分析、笔记管理等功能，帮助您更高效地阅读和理解学术论文。
 
@@ -42,10 +49,6 @@
 #### 🗂️ 三级层次化组织
 
 InsightPaper 支持通过**文件夹结构**自动识别论文的层级分类，无需手动操作：
-
-<p align="center">
-  <img src="C:/Users/Admins/.gemini/antigravity/brain/39193944-c6a7-4a77-89ae-7f66ff546312/uploaded_image_1767848161648.png" alt="Hierarchical Organization" width="300">
-</p>
 
 只需按照以下文件夹结构组织您的论文，程序将自动识别：
 
