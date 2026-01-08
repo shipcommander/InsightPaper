@@ -27,8 +27,8 @@
 
 ## News
 
-- (🔥 New) [2025/01/08] We released **InsightPaper v1.1** with [hierarchical organization](#-三级层次化组织) feature: supports automatic three-level classification (Topic → Group → PDF) through folder structure; optimized PDF rendering performance and text extraction algorithm with intelligent deduplication for translated documents.
-- (🎉 New) [2025/01/07] We released **InsightPaper Core v1.0**: integrated side-by-side reading, AI-assisted translation ([5 AI platforms](#-ai-助手)), smart annotation with synchronized dual-view highlighting, and auto-saving note system.
+- (🔥 New) [2025/01/08] 发布 **InsightPaper v1.1**，新增[三级层次化组织](#-三级层次化组织)功能：支持通过文件夹结构自动识别论文分类（主题 → 组 → PDF）；优化 PDF 渲染性能和文本提取算法，为抓取文档提供智能去重功能。
+- (🎉 New) [2025/01/07] 发布 **InsightPaper v1.0**：集成并排阅读、AI 辅助翻译（支持 [5 个 AI 平台](#-ai-助手)）、智能标注（双视图同步高亮）和自动保存笔记系统。
 
 ---
 
